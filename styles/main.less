@@ -126,13 +126,13 @@
 // Pop title
 #my-pop-title{
     width: auto;
-    padding: 79px 0;
+    padding: 50px 0;
     overflow: hidden;
     text-align: left;
     
 }
 #pop-title {
-    max-width: 80%;
+    max-width: 980px;
     margin: auto;
     text-align: left;
     padding: 0!important; 
@@ -154,6 +154,7 @@
         .border-radius(20px)!important;
         .box-shadow(0 1px 2px rgba(0,0,0,.25))!important;
         font-size:16px!important;
+        text-transform: none!important;
     }
 }
 body {
@@ -367,6 +368,9 @@ h2, h3, h4, h5 {}
 
 //styling acording to asset size
 #top-region{
+    .columnizer-row{
+        padding-top:10px;
+    }
 	   background: @alfac-company-blue;
 	   min-height: 70px;
            .columnizer-cols1{
@@ -378,6 +382,9 @@ h2, h3, h4, h5 {}
                 color:@alfac-company-blue!important;
                 padding:5px!important;
                 .border-radius(4px);
+            }
+            .doc-title{
+                color:@alfac-company-blue!important;
             }
     
     .columnizer-cols1{
@@ -396,6 +403,9 @@ h2, h3, h4, h5 {}
             line-height:normal;
             a{ color: white;&:hover{color:darken(white,5%)}}
         }
+        .doc-title{
+            color:@alfac-company-top-region-cols1-text!important;
+        }
     }
 }
     
@@ -404,6 +414,9 @@ h2, h3, h4, h5 {}
 
 
 #bottom-region{
+         .columnizer-row{
+             padding-top:10px;
+         }
         
          a {
             &:hover{color:darken(@link-color, 20%);}
@@ -414,22 +427,26 @@ h2, h3, h4, h5 {}
          }
          .columnizer-row{
             background:white;
-            padding-bottom:30px;
+            padding-bottom:10px;
             .asset-title {
                 color:darken(@alfac-company-bottom-regionn-text,3%);
                 font-size:17px;
             }
+            
             .description, .body, .description li, .body li,  {
                 color: @alfac-company-bottom-regionn-text;
                 font-size:12px;
+            }
+            .doc-title{
+                color:@alfac-company-bottom-regionn-text!important;
             }
         }
 }
         
 #top-region,#bottom-region{
     .columnizer-row:first-child{
-       padding-top:30px;
-       padding-bottom:20px;
+       padding-top:10px;
+       padding-bottom:10px;
     }
 }
 
