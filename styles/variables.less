@@ -61,33 +61,24 @@
 // To use your own grid, edit the following properties as needed.
 .columnizer-row-inner {
   margin: 0 auto;
-  width: 80%;
+  max-width:980px;
 }
 .columnizer-col {
 	float: left;
-	margin-left: 3%;
+	margin-left: 20px;
 
-    .columnizer-cols1 & { width: 800px;}
-	.columnizer-cols2 & { width:385px;}
-	.columnizer-cols3 & { width: 30%;
-            &:last-child { margin-left: 3%; }
+        .columnizer-cols1 & { width: 980px;}
+        .columnizer-cols2 & { width:480px;}
+	.columnizer-cols3 & { width: 313px;
+            &:last-child { margin-left: 21px; }
         }
-
-        .columnizer-cols4 & { width: 22%;
-            &+.columnizer-col{ margin-left: 3%; }
-            &+.columnizer-col+.columnizer-col{ margin-left: 3%; }
-            &+.columnizer-col+.columnizer-col+.columnizer-col{ margin-left: 3%; }
-        }
-	&:first-child { margin-left: 10px; }
-	&:last-child { margin-right: 10px; }
-}
-
-.columnizer-row-inner {
-    .columnizer-cols1 & { width:820px; margin: 0 auto 5px;}
-    .columnizer-cols2 & { width:820px; margin: 0 auto;}
+        .columnizer-cols4 & { width: 230px;}
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
 }
 
 // clearfix for columnizer rowss
+
 .columnizer-row:after { display: block; visibility: hidden; height: 0; clear: both; content: ' '; }
 .columnizer-row { *zoom: 1; }
 
