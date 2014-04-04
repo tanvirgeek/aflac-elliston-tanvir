@@ -154,8 +154,12 @@
         .box-shadow(0 1px 2px rgba(0,0,0,.25))!important;
         font-size:16px!important;
         text-transform: none!important;
+        &:hover{
+            color:lighten(lighten(@custom-color,20%),lighten(@custom-color,10%))!important;
+        }
     }
 }
+
 body {
     background-size: 100% 50% !important;
 }
@@ -372,8 +376,8 @@ h2, h3, h4, h5 {}
 	   background: @alfac-company-blue;
 	   min-height: 70px;
            .columnizer-cols1{
-                padding-top: 15px;
-                padding-bottom: 15px;
+                padding-top: 2px;
+                padding-bottom: 2px;
             }
             .link-btn{
                 background-color:#F2F2F2!important;
@@ -395,11 +399,17 @@ h2, h3, h4, h5 {}
             color: @alfac-company-top-region-cols1-text;
         }
         .description, .body, .description li, .body li,  {
-            color: @alfac-company-top-region-cols1-text;
+            color: white;
             font-size: 11px;
             font-weight: normal;
             line-height:normal;
-            a{ color: white;&:hover{color:darken(white,5%)}}
+            a{
+                color:@alfac-company-top-region-cols1-text;
+                font-size:9px;
+                &:hover{
+                    color:darken(@alfac-company-top-region-cols1-text,5%)
+                }
+            }
         }
         .doc-title{
             color:@alfac-company-top-region-cols1-text!important;
@@ -447,7 +457,11 @@ h2, h3, h4, h5 {}
        padding-bottom:10px;
     }
 }
-
+#bottom-region{
+    .columnizer-row:first-child{
+       padding-top:0;
+    }
+}
 
 
 #pop-shearing {
@@ -493,13 +507,18 @@ h2, h3, h4, h5 {}
 
 @media screen and (max-width: 960px) {
 
-  .columnizer-row {
-    padding-top:20px!important;
-    padding-bottom:20px!important;
+    #cool-header #cool-header-inner,#pop-title,#columnizer-row-inner{
+        width:80%!important;
+    }
+    
+    .columnizer-row {
+        padding-top:20px!important;
+        padding-bottom:20px!important;
     .asset-title {
         margin-bottom:15px!important;
     }
   }
+  
   .columnizer-cols1 .columnizer-row-inner,
   .columnizer-cols2 .columnizer-row-inner { width: 80% !important; }
 
